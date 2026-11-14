@@ -1,0 +1,670 @@
+{
+  "corrections": [
+    {
+      "away_goals": 4,
+      "away_team": "Newcastle United FC",
+      "corrected_date": "2020-07-01",
+      "evidence_line": 518,
+      "home_goals": 1,
+      "home_team": "AFC Bournemouth",
+      "original_date": "2019-07-01",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Norwich City FC",
+      "corrected_date": "2020-07-01",
+      "evidence_line": 519,
+      "home_goals": 4,
+      "home_team": "Arsenal FC",
+      "original_date": "2019-07-01",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Leicester City FC",
+      "corrected_date": "2020-07-01",
+      "evidence_line": 520,
+      "home_goals": 2,
+      "home_team": "Everton FC",
+      "original_date": "2019-07-01",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 2,
+      "away_team": "Chelsea FC",
+      "corrected_date": "2020-07-01",
+      "evidence_line": 521,
+      "home_goals": 3,
+      "home_team": "West Ham United FC",
+      "original_date": "2019-07-01",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Liverpool FC",
+      "corrected_date": "2020-07-02",
+      "evidence_line": 523,
+      "home_goals": 4,
+      "home_team": "Manchester City FC",
+      "original_date": "2019-07-02",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Tottenham Hotspur FC",
+      "corrected_date": "2020-07-02",
+      "evidence_line": 524,
+      "home_goals": 3,
+      "home_team": "Sheffield United FC",
+      "original_date": "2019-07-02",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Watford FC",
+      "corrected_date": "2020-07-04",
+      "evidence_line": 533,
+      "home_goals": 3,
+      "home_team": "Chelsea FC",
+      "original_date": "2019-07-04",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Crystal Palace FC",
+      "corrected_date": "2020-07-04",
+      "evidence_line": 530,
+      "home_goals": 3,
+      "home_team": "Leicester City FC",
+      "original_date": "2019-07-04",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 2,
+      "away_team": "AFC Bournemouth",
+      "corrected_date": "2020-07-04",
+      "evidence_line": 531,
+      "home_goals": 5,
+      "home_team": "Manchester United FC",
+      "original_date": "2019-07-04",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Brighton & Hove Albion FC",
+      "corrected_date": "2020-07-04",
+      "evidence_line": 529,
+      "home_goals": 0,
+      "home_team": "Norwich City FC",
+      "original_date": "2019-07-04",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 2,
+      "away_team": "Arsenal FC",
+      "corrected_date": "2020-07-04",
+      "evidence_line": 532,
+      "home_goals": 0,
+      "home_team": "Wolverhampton Wanderers FC",
+      "original_date": "2019-07-04",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Sheffield United FC",
+      "corrected_date": "2020-07-05",
+      "evidence_line": 538,
+      "home_goals": 1,
+      "home_team": "Burnley FC",
+      "original_date": "2019-07-05",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Aston Villa FC",
+      "corrected_date": "2020-07-05",
+      "evidence_line": 536,
+      "home_goals": 2,
+      "home_team": "Liverpool FC",
+      "original_date": "2019-07-05",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 2,
+      "away_team": "West Ham United FC",
+      "corrected_date": "2020-07-05",
+      "evidence_line": 535,
+      "home_goals": 2,
+      "home_team": "Newcastle United FC",
+      "original_date": "2019-07-05",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Manchester City FC",
+      "corrected_date": "2020-07-05",
+      "evidence_line": 537,
+      "home_goals": 1,
+      "home_team": "Southampton FC",
+      "original_date": "2019-07-05",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Everton FC",
+      "corrected_date": "2020-07-06",
+      "evidence_line": 540,
+      "home_goals": 1,
+      "home_team": "Tottenham Hotspur FC",
+      "original_date": "2019-07-06",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Leicester City FC",
+      "corrected_date": "2020-07-07",
+      "evidence_line": 546,
+      "home_goals": 1,
+      "home_team": "Arsenal FC",
+      "original_date": "2019-07-07",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 3,
+      "away_team": "Chelsea FC",
+      "corrected_date": "2020-07-07",
+      "evidence_line": 547,
+      "home_goals": 2,
+      "home_team": "Crystal Palace FC",
+      "original_date": "2019-07-07",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Norwich City FC",
+      "corrected_date": "2020-07-07",
+      "evidence_line": 545,
+      "home_goals": 2,
+      "home_team": "Watford FC",
+      "original_date": "2019-07-07",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 3,
+      "away_team": "Liverpool FC",
+      "corrected_date": "2020-07-08",
+      "evidence_line": 552,
+      "home_goals": 1,
+      "home_team": "Brighton & Hove Albion FC",
+      "original_date": "2019-07-08",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Newcastle United FC",
+      "corrected_date": "2020-07-08",
+      "evidence_line": 549,
+      "home_goals": 5,
+      "home_team": "Manchester City FC",
+      "original_date": "2019-07-08",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Wolverhampton Wanderers FC",
+      "corrected_date": "2020-07-08",
+      "evidence_line": 550,
+      "home_goals": 1,
+      "home_team": "Sheffield United FC",
+      "original_date": "2019-07-08",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Burnley FC",
+      "corrected_date": "2020-07-08",
+      "evidence_line": 551,
+      "home_goals": 0,
+      "home_team": "West Ham United FC",
+      "original_date": "2019-07-08",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Tottenham Hotspur FC",
+      "corrected_date": "2020-07-09",
+      "evidence_line": 556,
+      "home_goals": 0,
+      "home_team": "AFC Bournemouth",
+      "original_date": "2019-07-09",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 3,
+      "away_team": "Manchester United FC",
+      "corrected_date": "2020-07-09",
+      "evidence_line": 555,
+      "home_goals": 0,
+      "home_team": "Aston Villa FC",
+      "original_date": "2019-07-09",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Southampton FC",
+      "corrected_date": "2020-07-09",
+      "evidence_line": 554,
+      "home_goals": 1,
+      "home_team": "Everton FC",
+      "original_date": "2019-07-09",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 5,
+      "away_team": "Manchester City FC",
+      "corrected_date": "2020-07-11",
+      "evidence_line": 564,
+      "home_goals": 0,
+      "home_team": "Brighton & Hove Albion FC",
+      "original_date": "2019-07-11",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Burnley FC",
+      "corrected_date": "2020-07-11",
+      "evidence_line": 562,
+      "home_goals": 1,
+      "home_team": "Liverpool FC",
+      "original_date": "2019-07-11",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 4,
+      "away_team": "West Ham United FC",
+      "corrected_date": "2020-07-11",
+      "evidence_line": 565,
+      "home_goals": 0,
+      "home_team": "Norwich City FC",
+      "original_date": "2019-07-11",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Chelsea FC",
+      "corrected_date": "2020-07-11",
+      "evidence_line": 563,
+      "home_goals": 3,
+      "home_team": "Sheffield United FC",
+      "original_date": "2019-07-11",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Newcastle United FC",
+      "corrected_date": "2020-07-11",
+      "evidence_line": 561,
+      "home_goals": 2,
+      "home_team": "Watford FC",
+      "original_date": "2019-07-11",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Leicester City FC",
+      "corrected_date": "2020-07-12",
+      "evidence_line": 570,
+      "home_goals": 4,
+      "home_team": "AFC Bournemouth",
+      "original_date": "2019-07-12",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Crystal Palace FC",
+      "corrected_date": "2020-07-12",
+      "evidence_line": 568,
+      "home_goals": 2,
+      "home_team": "Aston Villa FC",
+      "original_date": "2019-07-12",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Arsenal FC",
+      "corrected_date": "2020-07-12",
+      "evidence_line": 569,
+      "home_goals": 2,
+      "home_team": "Tottenham Hotspur FC",
+      "original_date": "2019-07-12",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Everton FC",
+      "corrected_date": "2020-07-12",
+      "evidence_line": 567,
+      "home_goals": 3,
+      "home_team": "Wolverhampton Wanderers FC",
+      "original_date": "2019-07-12",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 2,
+      "away_team": "Southampton FC",
+      "corrected_date": "2020-07-13",
+      "evidence_line": 572,
+      "home_goals": 2,
+      "home_team": "Manchester United FC",
+      "original_date": "2019-07-13",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Norwich City FC",
+      "corrected_date": "2020-07-14",
+      "evidence_line": 577,
+      "home_goals": 1,
+      "home_team": "Chelsea FC",
+      "original_date": "2019-07-14",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Liverpool FC",
+      "corrected_date": "2020-07-15",
+      "evidence_line": 581,
+      "home_goals": 2,
+      "home_team": "Arsenal FC",
+      "original_date": "2019-07-15",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Wolverhampton Wanderers FC",
+      "corrected_date": "2020-07-15",
+      "evidence_line": 582,
+      "home_goals": 1,
+      "home_team": "Burnley FC",
+      "original_date": "2019-07-15",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "AFC Bournemouth",
+      "corrected_date": "2020-07-15",
+      "evidence_line": 579,
+      "home_goals": 2,
+      "home_team": "Manchester City FC",
+      "original_date": "2019-07-15",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 3,
+      "away_team": "Tottenham Hotspur FC",
+      "corrected_date": "2020-07-15",
+      "evidence_line": 580,
+      "home_goals": 1,
+      "home_team": "Newcastle United FC",
+      "original_date": "2019-07-15",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 2,
+      "away_team": "Manchester United FC",
+      "corrected_date": "2020-07-16",
+      "evidence_line": 586,
+      "home_goals": 0,
+      "home_team": "Crystal Palace FC",
+      "original_date": "2019-07-16",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Aston Villa FC",
+      "corrected_date": "2020-07-16",
+      "evidence_line": 584,
+      "home_goals": 1,
+      "home_team": "Everton FC",
+      "original_date": "2019-07-16",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Sheffield United FC",
+      "corrected_date": "2020-07-16",
+      "evidence_line": 585,
+      "home_goals": 2,
+      "home_team": "Leicester City FC",
+      "original_date": "2019-07-16",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Brighton & Hove Albion FC",
+      "corrected_date": "2020-07-16",
+      "evidence_line": 587,
+      "home_goals": 1,
+      "home_team": "Southampton FC",
+      "original_date": "2019-07-16",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Watford FC",
+      "corrected_date": "2020-07-17",
+      "evidence_line": 589,
+      "home_goals": 3,
+      "home_team": "West Ham United FC",
+      "original_date": "2019-07-17",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 2,
+      "away_team": "Burnley FC",
+      "corrected_date": "2020-07-18",
+      "evidence_line": 594,
+      "home_goals": 0,
+      "home_team": "Norwich City FC",
+      "original_date": "2019-07-18",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 2,
+      "away_team": "Southampton FC",
+      "corrected_date": "2020-07-19",
+      "evidence_line": 597,
+      "home_goals": 0,
+      "home_team": "AFC Bournemouth",
+      "original_date": "2019-07-19",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Leicester City FC",
+      "corrected_date": "2020-07-19",
+      "evidence_line": 596,
+      "home_goals": 3,
+      "home_team": "Tottenham Hotspur FC",
+      "original_date": "2019-07-19",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Newcastle United FC",
+      "corrected_date": "2020-07-20",
+      "evidence_line": 599,
+      "home_goals": 0,
+      "home_team": "Brighton & Hove Albion FC",
+      "original_date": "2019-07-20",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Everton FC",
+      "corrected_date": "2020-07-20",
+      "evidence_line": 600,
+      "home_goals": 0,
+      "home_team": "Sheffield United FC",
+      "original_date": "2019-07-20",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Crystal Palace FC",
+      "corrected_date": "2020-07-20",
+      "evidence_line": 601,
+      "home_goals": 2,
+      "home_team": "Wolverhampton Wanderers FC",
+      "original_date": "2019-07-20",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Arsenal FC",
+      "corrected_date": "2020-07-21",
+      "evidence_line": 603,
+      "home_goals": 1,
+      "home_team": "Aston Villa FC",
+      "original_date": "2019-07-21",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 4,
+      "away_team": "Manchester City FC",
+      "corrected_date": "2020-07-21",
+      "evidence_line": 604,
+      "home_goals": 0,
+      "home_team": "Watford FC",
+      "original_date": "2019-07-21",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 3,
+      "away_team": "Chelsea FC",
+      "corrected_date": "2020-07-22",
+      "evidence_line": 607,
+      "home_goals": 5,
+      "home_team": "Liverpool FC",
+      "original_date": "2019-07-22",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "West Ham United FC",
+      "corrected_date": "2020-07-22",
+      "evidence_line": 606,
+      "home_goals": 1,
+      "home_team": "Manchester United FC",
+      "original_date": "2019-07-22",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 2,
+      "away_team": "Watford FC",
+      "corrected_date": "2020-07-26",
+      "evidence_line": 612,
+      "home_goals": 3,
+      "home_team": "Arsenal FC",
+      "original_date": "2019-07-26",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 2,
+      "away_team": "Brighton & Hove Albion FC",
+      "corrected_date": "2020-07-26",
+      "evidence_line": 613,
+      "home_goals": 1,
+      "home_team": "Burnley FC",
+      "original_date": "2019-07-26",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Wolverhampton Wanderers FC",
+      "corrected_date": "2020-07-26",
+      "evidence_line": 614,
+      "home_goals": 2,
+      "home_team": "Chelsea FC",
+      "original_date": "2019-07-26",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Tottenham Hotspur FC",
+      "corrected_date": "2020-07-26",
+      "evidence_line": 615,
+      "home_goals": 1,
+      "home_team": "Crystal Palace FC",
+      "original_date": "2019-07-26",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 3,
+      "away_team": "AFC Bournemouth",
+      "corrected_date": "2020-07-26",
+      "evidence_line": 616,
+      "home_goals": 1,
+      "home_team": "Everton FC",
+      "original_date": "2019-07-26",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 2,
+      "away_team": "Manchester United FC",
+      "corrected_date": "2020-07-26",
+      "evidence_line": 617,
+      "home_goals": 0,
+      "home_team": "Leicester City FC",
+      "original_date": "2019-07-26",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 0,
+      "away_team": "Norwich City FC",
+      "corrected_date": "2020-07-26",
+      "evidence_line": 618,
+      "home_goals": 5,
+      "home_team": "Manchester City FC",
+      "original_date": "2019-07-26",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 3,
+      "away_team": "Liverpool FC",
+      "corrected_date": "2020-07-26",
+      "evidence_line": 619,
+      "home_goals": 1,
+      "home_team": "Newcastle United FC",
+      "original_date": "2019-07-26",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Sheffield United FC",
+      "corrected_date": "2020-07-26",
+      "evidence_line": 620,
+      "home_goals": 3,
+      "home_team": "Southampton FC",
+      "original_date": "2019-07-26",
+      "season": "2019-20"
+    },
+    {
+      "away_goals": 1,
+      "away_team": "Aston Villa FC",
+      "corrected_date": "2020-07-26",
+      "evidence_line": 621,
+      "home_goals": 1,
+      "home_team": "West Ham United FC",
+      "original_date": "2019-07-26",
+      "season": "2019-20"
+    }
+  ],
+  "evidence_file": "2019-20-evidence.txt",
+  "evidence_sha256": "fdc8300c09e0700faa0c517ff408bc630b8b6a77b6f1aa68e5858f9adae6f72d",
+  "evidence_url": "https://raw.githubusercontent.com/openfootball/eng-england/9ee7a0c351805c99cc334478a9bf04b7d0432fec/2019-20/1-premierleague.txt",
+  "raw_file": "2019-20.json",
+  "raw_sha256": "9e1695f85ce5553f762e809dea357ec0a95838939be89569060a83c4e98a302d",
+  "version": 1
+}

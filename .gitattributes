@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.zip binary
+# Preserve exact source bytes used by the provenance checksums.
+data/audited/** -text whitespace=cr-at-eol
+data/raw/** -text whitespace=cr-at-eol
+# Sealed prediction and derived-research checksums include the original line endings.
+artifacts/**/*.csv -text whitespace=cr-at-eol
+# Generated report replay must not change a clean checkout's line endings.
+artifacts/**/*.json -text whitespace=cr-at-eol
+data/verification/*.json -text whitespace=cr-at-eol

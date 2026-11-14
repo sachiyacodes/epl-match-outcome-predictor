@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "research_only": true,
+  "serving_model_changed": false,
+  "scope": "One historical EPL season; exploratory within-season result, not modern confirmation",
+  "attribution": "Pappalardo et al. (2019), Wyscout, doi:10.1038/s41597-019-0247-7; CC BY 4.0. Estimated xG is a derived project model, not provider-supplied xG.",
+  "source_matches": 380,
+  "source_events": 643150,
+  "non_penalty_shots": 8801,
+  "penalties_excluded": 80,
+  "out_of_time_shots": 6427,
+  "xg_matches": 280,
+  "evaluation_matches": 130,
+  "evaluation_start": "2018-02-03",
+  "evaluation_end": "2018-05-13",
+  "shot_model": {
+    "log_loss": 0.2925106197835638,
+    "brier": 0.08409924031022983
+  },
+  "outcome_models": {
+    "goals_only": {
+      "log_loss": 1.1043755268992033,
+      "accuracy": 0.43846153846153846,
+      "brier_multiclass": 0.6541665964442517,
+      "expected_calibration_error": 0.11264666022443072,
+      "calibration": {
+        "A": {
+          "mean_predicted": [
+            0.059885195126840186,
+            0.14913832605841482,
+            0.245493323743402,
+            0.35110019731753694,
+            0.45227413564539776,
+            0.5194676472854414,
+            0.6502113053314758,
+            0.7198511480120523,
+            0.8257050119754716
+          ],
+          "fraction_positive": [
+            0.21428571428571427,
+            0.19444444444444445,
+            0.4375,
+            0.26666666666666666,
+            0.125,
+            0.25,
+            0.8,
+            0.0,
+            0.0
+          ]
+        },
+        "D": {
+          "mean_predicted": [
+            0.08006604637671816,
+            0.16676427378786168,
+            0.24683348199271304,
+            0.3491617181843812,
+            0.4355558228613187
+          ],
+          "fraction_positive": [
+            0.0,
+            0.22727272727272727,
+            0.25,
+            0.23076923076923078,
+            0.21052631578947367
+          ]
+        },
+        "H": {
+          "mean_predicted": [
+            0.0665604760891815,
+            0.1498695442917794,
+            0.2502406184614197,
+            0.34829540940330794,
+            0.44895586032294277,
+            0.5525214568643285,
+            0.6285247920877842,
+            0.7460018309583967,
+            0.8279277644228754,
+            0.9122695403202143
+          ],
+          "fraction_positive": [
+            0.0,
+            0.5,
+            0.42857142857142855,
+            0.45,
+            0.34782608695652173,
+            0.47619047619047616,
+            0.5882352941176471,
+            0.75,
+            0.6,
+            0.0
+          ]
+        }
+      }
+    },
+    "goals_plus_lagged_xg": {
+      "log_loss": 1.0938675276473393,
+      "accuracy": 0.45384615384615384,
+      "brier_multiclass": 0.6416975707829682,
+      "expected_calibration_error": 0.11456897182010037,
+      "calibration": {
+        "A": {
+          "mean_predicted": [
+            0.051617419060811146,
+            0.15236640375686994,
+            0.24380521508454928,
+            0.34674482902822007,
+            0.4260493370060419,
+            0.5544862596209678,
+            0.6209709606442841,
+            0.7486596647123367,
+            0.817769189217344
+          ],
+          "fraction_positive": [
+            0.17073170731707318,
+            0.2727272727272727,
+            0.38095238095238093,
+            0.35294117647058826,
+            0.1111111111111111,
+            0.6666666666666666,
+            0.5,
+            1.0,
+            0.0
+          ]
+        },
+        "D": {
+          "mean_predicted": [
+            0.07783529234598241,
+            0.1585883526204072,
+            0.250727021224669,
+            0.3553525209208081,
+            0.4442099126373608,
+            0.5809722290188786,
+            0.7078197457221396
+          ],
+          "fraction_positive": [
+            0.16666666666666666,
+            0.22727272727272727,
+            0.23076923076923078,
+            0.28205128205128205,
+            0.14285714285714285,
+            0.5,
+            0.0
+          ]
+        },
+        "H": {
+          "mean_predicted": [
+            0.06032785833424188,
+            0.13843139191991755,
+            0.25412501150139,
+            0.3589172954864162,
+            0.44534826196928656,
+            0.5536161906328269,
+            0.6464017977464519,
+            0.7544969204073929,
+            0.8513641274152074,
+            0.9124261685759176
+          ],
+          "fraction_positive": [
+            0.0,
+            0.375,
+            0.47368421052631576,
+            0.2631578947368421,
+            0.5,
+            0.45,
+            0.5882352941176471,
+            0.7142857142857143,
+            0.7142857142857143,
+            0.75
+          ]
+        }
+      }
+    }
+  },
+  "accuracy_difference": 0.015384615384615385,
+  "log_loss_difference": -0.010507999251863964,
+  "limitations": [
+    "One 2017/18 season cannot establish present-day forecast quality",
+    "Small evaluation set and no external-season confirmation",
+    "No hyperparameter tuning, modern model promotion, or betting-profitability claim",
+    "Penalties excluded; estimates are non-penalty shot quality",
+    "Coordinates use a nominal 105x68 metre pitch",
+    "Final lineups and same-match goal/xG outcomes are not pre-match inputs"
+  ],
+  "derived_file_sha256": {
+    "out-of-time-shots.csv": "b2a19f824bdc061e62a4b6b2b446d60914d7396e208ee4d3677141932d7a39ef",
+    "match-estimated-xg.csv": "fc779fdb47983737a48cca724c9e6ce7570a47552cb04ff4d590b2f0d54ca70a",
+    "outcome-predictions.csv": "bb0f2261e5b6863f54f9b24cc6c6bdcc7c91dcab4596cb4710931e365549bc9b"
+  }
+}

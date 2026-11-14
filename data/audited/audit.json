@@ -1,0 +1,125 @@
+{
+  "audit_version": 1,
+  "correction_count": 66,
+  "corrections_sha256": "1187be2cb6055a2346432341a954c2d53d55cbcecfd1ffaf0c2d1afa908aa165",
+  "data_through": "2026-05-24",
+  "matches": 6080,
+  "official_corroboration": "https://www.premierleague.com/en/news/1697162",
+  "quarantined": [],
+  "seasons": [
+    {
+      "first_date": "2010-08-14",
+      "last_date": "2011-05-22",
+      "matches": 380,
+      "season": "2010-11",
+      "teams": 20
+    },
+    {
+      "first_date": "2011-08-13",
+      "last_date": "2012-05-13",
+      "matches": 380,
+      "season": "2011-12",
+      "teams": 20
+    },
+    {
+      "first_date": "2012-08-18",
+      "last_date": "2013-05-19",
+      "matches": 380,
+      "season": "2012-13",
+      "teams": 20
+    },
+    {
+      "first_date": "2013-08-17",
+      "last_date": "2014-05-11",
+      "matches": 380,
+      "season": "2013-14",
+      "teams": 20
+    },
+    {
+      "first_date": "2014-08-16",
+      "last_date": "2015-05-24",
+      "matches": 380,
+      "season": "2014-15",
+      "teams": 20
+    },
+    {
+      "first_date": "2015-08-08",
+      "last_date": "2016-05-17",
+      "matches": 380,
+      "season": "2015-16",
+      "teams": 20
+    },
+    {
+      "first_date": "2016-08-13",
+      "last_date": "2017-05-21",
+      "matches": 380,
+      "season": "2016-17",
+      "teams": 20
+    },
+    {
+      "first_date": "2017-08-11",
+      "last_date": "2018-05-13",
+      "matches": 380,
+      "season": "2017-18",
+      "teams": 20
+    },
+    {
+      "first_date": "2018-08-10",
+      "last_date": "2019-05-12",
+      "matches": 380,
+      "season": "2018-19",
+      "teams": 20
+    },
+    {
+      "first_date": "2019-08-09",
+      "last_date": "2020-07-26",
+      "matches": 380,
+      "season": "2019-20",
+      "teams": 20
+    },
+    {
+      "first_date": "2020-09-12",
+      "last_date": "2021-05-23",
+      "matches": 380,
+      "season": "2020-21",
+      "teams": 20
+    },
+    {
+      "first_date": "2021-08-13",
+      "last_date": "2022-05-22",
+      "matches": 380,
+      "season": "2021-22",
+      "teams": 20
+    },
+    {
+      "first_date": "2022-08-05",
+      "last_date": "2023-05-28",
+      "matches": 380,
+      "season": "2022-23",
+      "teams": 20
+    },
+    {
+      "first_date": "2023-08-11",
+      "last_date": "2024-05-19",
+      "matches": 380,
+      "season": "2023-24",
+      "teams": 20
+    },
+    {
+      "first_date": "2024-08-16",
+      "last_date": "2025-05-25",
+      "matches": 380,
+      "season": "2024-25",
+      "teams": 20
+    },
+    {
+      "first_date": "2025-08-15",
+      "last_date": "2026-05-24",
+      "matches": 380,
+      "season": "2025-26",
+      "teams": 20
+    }
+  ],
+  "source_manifest_sha256": "0c1af01d45b6e180f014de21a3577d570878fc068802be7bd438b0a895c39e61",
+  "status": "passed"
+}

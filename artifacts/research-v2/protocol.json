@@ -1,0 +1,575 @@
+{
+  "version": 2,
+  "code_sha256": {
+    "experiments.py": "5d0fbcfcedadee807f17981754de60017d4bfd59f755d7ab4ddfbc50d4fac231",
+    "advanced.py": "44fcd9897c18b87b9ed217e73282ea857aeecfea996ef712f5f977a3e55b748d",
+    "score_model.py": "6bc5a19a63ee789a98fd25668727a8b6a4d0a6834ff4848f7cd77d3de85a4770",
+    "features.py": "d8cd0d870732587859b3c5385ac220c2493fa6decf4bc0002b96449d21b2db7d",
+    "train.py": "e764a7f4863c8e28270bc2eb53c1006ff94765ce3e575d8fd3a5fca63c5652a6",
+    "data.py": "f130c8357b77b1a36a7f08ae3801b628af250c08a4dc1ba0f69e75fa24657786",
+    "audit.py": "a6e44573101b67b4c5ef9f486158f907fdd98a895660879cda679838e8ffb7fa"
+  },
+  "sklearn": "1.8.0",
+  "seed": 20261114,
+  "data_hash": "c748762ffdd393411e8b4d5d2345da507ceda342242aac8fbd708ef1eaabacf7",
+  "audit": {
+    "audit_version": 1,
+    "correction_count": 66,
+    "corrections_sha256": "1187be2cb6055a2346432341a954c2d53d55cbcecfd1ffaf0c2d1afa908aa165",
+    "data_through": "2026-05-24",
+    "matches": 6080,
+    "official_corroboration": "https://www.premierleague.com/en/news/1697162",
+    "quarantined": [],
+    "seasons": [
+      {
+        "first_date": "2010-08-14",
+        "last_date": "2011-05-22",
+        "matches": 380,
+        "season": "2010-11",
+        "teams": 20
+      },
+      {
+        "first_date": "2011-08-13",
+        "last_date": "2012-05-13",
+        "matches": 380,
+        "season": "2011-12",
+        "teams": 20
+      },
+      {
+        "first_date": "2012-08-18",
+        "last_date": "2013-05-19",
+        "matches": 380,
+        "season": "2012-13",
+        "teams": 20
+      },
+      {
+        "first_date": "2013-08-17",
+        "last_date": "2014-05-11",
+        "matches": 380,
+        "season": "2013-14",
+        "teams": 20
+      },
+      {
+        "first_date": "2014-08-16",
+        "last_date": "2015-05-24",
+        "matches": 380,
+        "season": "2014-15",
+        "teams": 20
+      },
+      {
+        "first_date": "2015-08-08",
+        "last_date": "2016-05-17",
+        "matches": 380,
+        "season": "2015-16",
+        "teams": 20
+      },
+      {
+        "first_date": "2016-08-13",
+        "last_date": "2017-05-21",
+        "matches": 380,
+        "season": "2016-17",
+        "teams": 20
+      },
+      {
+        "first_date": "2017-08-11",
+        "last_date": "2018-05-13",
+        "matches": 380,
+        "season": "2017-18",
+        "teams": 20
+      },
+      {
+        "first_date": "2018-08-10",
+        "last_date": "2019-05-12",
+        "matches": 380,
+        "season": "2018-19",
+        "teams": 20
+      },
+      {
+        "first_date": "2019-08-09",
+        "last_date": "2020-07-26",
+        "matches": 380,
+        "season": "2019-20",
+        "teams": 20
+      },
+      {
+        "first_date": "2020-09-12",
+        "last_date": "2021-05-23",
+        "matches": 380,
+        "season": "2020-21",
+        "teams": 20
+      },
+      {
+        "first_date": "2021-08-13",
+        "last_date": "2022-05-22",
+        "matches": 380,
+        "season": "2021-22",
+        "teams": 20
+      },
+      {
+        "first_date": "2022-08-05",
+        "last_date": "2023-05-28",
+        "matches": 380,
+        "season": "2022-23",
+        "teams": 20
+      },
+      {
+        "first_date": "2023-08-11",
+        "last_date": "2024-05-19",
+        "matches": 380,
+        "season": "2023-24",
+        "teams": 20
+      },
+      {
+        "first_date": "2024-08-16",
+        "last_date": "2025-05-25",
+        "matches": 380,
+        "season": "2024-25",
+        "teams": 20
+      },
+      {
+        "first_date": "2025-08-15",
+        "last_date": "2026-05-24",
+        "matches": 380,
+        "season": "2025-26",
+        "teams": 20
+      }
+    ],
+    "source_manifest_sha256": "0c1af01d45b6e180f014de21a3577d570878fc068802be7bd438b0a895c39e61",
+    "status": "passed"
+  },
+  "development_years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "confirmation_year": 2025,
+  "logistic": [
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 10,
+      "home_offset": 0,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 10,
+      "home_offset": 0,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 10,
+      "home_offset": 0,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 10,
+      "home_offset": 50,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 10,
+      "home_offset": 50,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 10,
+      "home_offset": 50,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 10,
+      "home_offset": 100,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 10,
+      "home_offset": 100,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 10,
+      "home_offset": 100,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 20,
+      "home_offset": 0,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 20,
+      "home_offset": 0,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 20,
+      "home_offset": 0,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 20,
+      "home_offset": 50,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 20,
+      "home_offset": 50,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 20,
+      "home_offset": 50,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 20,
+      "home_offset": 100,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 20,
+      "home_offset": 100,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 20,
+      "home_offset": 100,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 40,
+      "home_offset": 0,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 40,
+      "home_offset": 0,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 40,
+      "home_offset": 0,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 40,
+      "home_offset": 50,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 40,
+      "home_offset": 50,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 40,
+      "home_offset": 50,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 40,
+      "home_offset": 100,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 40,
+      "home_offset": 100,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "elo",
+      "k": 40,
+      "home_offset": 100,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 10,
+      "home_offset": 0,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 10,
+      "home_offset": 0,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 10,
+      "home_offset": 0,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 10,
+      "home_offset": 50,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 10,
+      "home_offset": 50,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 10,
+      "home_offset": 50,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 10,
+      "home_offset": 100,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 10,
+      "home_offset": 100,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 10,
+      "home_offset": 100,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 20,
+      "home_offset": 0,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 20,
+      "home_offset": 0,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 20,
+      "home_offset": 0,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 20,
+      "home_offset": 50,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 20,
+      "home_offset": 50,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 20,
+      "home_offset": 50,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 20,
+      "home_offset": 100,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 20,
+      "home_offset": 100,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 20,
+      "home_offset": 100,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 40,
+      "home_offset": 0,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 40,
+      "home_offset": 0,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 40,
+      "home_offset": 0,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 40,
+      "home_offset": 50,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 40,
+      "home_offset": 50,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 40,
+      "home_offset": 50,
+      "C": 10.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 40,
+      "home_offset": 100,
+      "C": 0.1
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 40,
+      "home_offset": 100,
+      "C": 1.0
+    },
+    {
+      "kind": "logistic",
+      "bundle": "rich",
+      "k": 40,
+      "home_offset": 100,
+      "C": 10.0
+    }
+  ],
+  "boosting": "8 configs on development-selected logistic feature settings",
+  "score": [
+    {
+      "kind": "score",
+      "half_life": 180,
+      "corrected": false
+    },
+    {
+      "kind": "score",
+      "half_life": 365,
+      "corrected": false
+    },
+    {
+      "kind": "score",
+      "half_life": 730,
+      "corrected": false
+    },
+    {
+      "kind": "score",
+      "half_life": 180,
+      "corrected": true
+    },
+    {
+      "kind": "score",
+      "half_life": 365,
+      "corrected": true
+    },
+    {
+      "kind": "score",
+      "half_life": 730,
+      "corrected": true
+    }
+  ],
+  "calibration": "prior-season monthly out-of-time predictions; scalar T in [.25,4]",
+  "selection": {
+    "min_accuracy_gain": 0.01,
+    "max_log_loss_regression": 0.01,
+    "majority_seasons": true
+  },
+  "promotion": {
+    "positive_accuracy_gain": true,
+    "accuracy_ci95_lower_gt_zero": true,
+    "max_calibrated_log_loss_regression": 0.01
+  },
+  "bootstrap_resamples": 2000
+}

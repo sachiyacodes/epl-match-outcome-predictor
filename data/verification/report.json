@@ -1,0 +1,64 @@
+{
+  "additional_sources": [
+    {
+      "agreement": "https://github.com/hudl/open-data/blob/master/LICENSE.pdf",
+      "reason": "Separate agreement restricts commercial use and raw redistribution and requires branding for published analysis; not bundled into this permissively licensed release",
+      "season": "2015-16",
+      "source": "StatsBomb / Hudl open data",
+      "status": "not_used"
+    }
+  ],
+  "coverage_fraction": 0.0625,
+  "independent_provider": "Wyscout",
+  "independently_agreeing_matches": 380,
+  "independently_compared_matches": 380,
+  "independently_compared_seasons": [
+    "2017-18"
+  ],
+  "limitations": [
+    "Agreement is not proof that either provider is error-free",
+    "Only the listed season has been independently reconciled; other seasons remain unchecked",
+    "This report does not establish better prediction accuracy or change serving data/models"
+  ],
+  "provenance": {
+    "archive_member": "matches_England.json",
+    "archive_member_sha256": "620725c2e6a58b4db3e574ed6c559136477451d81af543f8a06bd85c3da3fe29",
+    "files": {
+      "matches.zip": {
+        "bytes": 645097,
+        "record": "https://figshare.com/articles/dataset/Matches/7770422",
+        "sha256": "c8f92bb7533e5c127e043cee764c991b5c25b4f5e70a65be931baae0b1765ce9",
+        "url": "https://ndownloader.figshare.com/files/14464622"
+      },
+      "teams.json": {
+        "bytes": 27404,
+        "record": "https://figshare.com/articles/dataset/Teams/7765310",
+        "sha256": "9f7a4a3b3d92c0be33f40613ad6e6eb4316c3b9771ec74c61a22c9b8ece23a4d",
+        "url": "https://ndownloader.figshare.com/files/15073697"
+      }
+    },
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "local_audit_sha256": "c0f3fc9d6cba26f696fabc9f0ea97c847d44748eab883ab4695309a1ae453ea7",
+    "local_season_sha256": "b635f2442a94aa91d85f282fc5e8f7f5dc4f0d04e3e30c4472102f5708d7548c",
+    "normalization": "Remove terminal ' FC' from team names; UTC calendar dates; exact home/away fixture join",
+    "source": "Wyscout / Pappalardo et al. (2019)",
+    "source_paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6817871/",
+    "version": 1
+  },
+  "result": {
+    "agreements": 380,
+    "conflict_count": 0,
+    "conflicts": [],
+    "independent_matches": 380,
+    "local_matches": 380,
+    "local_seasons": [
+      "2017-18"
+    ],
+    "paired_fixtures": 380,
+    "status": "agreement"
+  },
+  "total_audited_matches": 6080,
+  "unchecked_matches": 5700,
+  "version": 1
+}
