@@ -1,36 +1,55 @@
-# Premier League Match Outcome Predictor
+<div align="center">
+
+# Touchline
+
+### The next match. In probabilities.
+
+An end-to-end Premier League prediction app with real historical data, auditable experiments, and a responsive dashboard.
 
 [![CI](https://github.com/sachiyacodes/epl-match-outcome-predictor/actions/workflows/ci.yml/badge.svg)](https://github.com/sachiyacodes/epl-match-outcome-predictor/actions/workflows/ci.yml)
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](requirements-lock.txt)
+[![Next.js 16](https://img.shields.io/badge/Next.js-16-111111?logo=nextdotjs)](frontend/package.json)
+[![License: MIT](https://img.shields.io/badge/Code-MIT-176B50)](LICENSE)
 
-Predict home-win, draw and away-win probabilities with an audited historical dataset, leakage-aware features, FastAPI and a Next.js TypeScript dashboard. This is a reproducible research project with honest negative results, not a claim of production forecasting accuracy.
+[Quick start](#run-locally-windows) · [Results](#measured-results) · [Architecture](#how-it-works) · [Technical guide](docs/REPRODUCIBILITY.md)
 
-- **6,080 historical EPL matches**, with 66 source-date corrections backed by fixture evidence.
-- **380/6,080 matches independently reconciled** against Wyscout: no date or score conflicts. Other matches have structural checks, not independent confirmation.
-- **69 model configurations** with chronological monthly refits and a locked confirmation season.
-- A separate **shot-quality experiment** using openly licensed Wyscout events, kept out of the serving model.
-- Windows setup, reproducible reports, pinned dependencies and CI on Windows/Linux.
+</div>
 
-## Results without inflated claims
+![Touchline desktop dashboard showing Arsenal–Chelsea home, draw, and away probabilities](docs/images/dashboard-desktop.png)
 
-| Experiment | Baseline accuracy | Challenger accuracy | Interpretation |
-| --- | ---: | ---: | --- |
-| 2025/26 confirmation, 380 matches | 47.63% | 47.11% | Challenger failed promotion; audited baseline remains active |
-| Exploratory 2017/18 shot-quality comparison, 130 matches | 43.85% | 45.38% | Two additional correct predictions; too small and historical to establish a modern improvement |
+*A real local API response for a hypothetical Arsenal–Chelsea fixture on August 1, 2026. The snapshot ends May 24, 2026; this is not a live fixture forecast.*
 
-These are different datasets and evaluation procedures. The shot-quality experiment does not replace the main model. Full results: [model comparison](MODEL_REPORT.md), [shot-quality report](artifacts/shot-quality/report.json), [source verification](data/verification/README.md), [data rights and attribution](DATA_SOURCES.md).
+## What you can do
+
+- **Explore a fixture.** Choose two clubs and a date; get home-win, draw, and away-win probabilities.
+- **Inspect the evidence.** See confirmation scores, calibration metrics, model metadata, and the promotion decision.
+- **Reproduce the pipeline.** Audit source bytes, rebuild the selected serving model, and run the API locally.
+- **Trace the data.** Follow source revisions, checksums, fixture-level date corrections, and independent verification reports.
+
+Built with **Next.js + TypeScript**, **FastAPI**, **scikit-learn**, **NumPy / SciPy**, and **GitHub Actions**. No paid API, account, or database is required for the local demo.
+
+## Product tour
+
+### Evaluation you can inspect
+
+![Evaluation report showing the baseline-retained decision, confirmation metrics, and uncertainty intervals](docs/images/evaluation.png)
+
+The dashboard keeps development and confirmation results separate. A challenger must pass the recorded promotion gates before replacing the baseline.
 
 <details>
-<summary>View dashboard screenshot</summary>
+<summary><strong>Mobile preview</strong></summary>
 
-![Dashboard showing probabilities, calibration and the retained-baseline decision](docs/images/dashboard.png)
+<p align="center">
+  <img src="docs/images/dashboard-mobile.png" width="320" alt="Touchline mobile dashboard with fixture controls and outcome probabilities" />
+</p>
 
 </details>
 
-**The original 53.42% benchmark is superseded.** Its source dated 66 July 2020 fixtures in July 2019. The audited pipeline preserves raw bytes and applies source-verified corrections. Reproducing the original procedure after correction scores 53.29%. Neither historical score is the new confirmation result.
+The three previews above come from the running app, captured November 15, 2026. Desktop: 1440 × 1040; mobile: 390 × 1500. [Earlier full dashboard view](docs/images/dashboard.png).
 
-## Windows setup
+## Run locally (Windows)
 
-Install Python 3.12 and Node.js 24 LTS. In PowerShell, from this repository root:
+Install **Git**, **Python 3.12**, and **Node.js 24 LTS**. Open PowerShell:
 
 ```powershell
 git clone https://github.com/sachiyacodes/epl-match-outcome-predictor.git
@@ -40,24 +59,10 @@ py -3.12 -m venv .venv
 $env:PYTHONPATH = 'backend'
 .\.venv\Scripts\python.exe -m epl.audit
 .\.venv\Scripts\python.exe -m epl.restore_model
-.\.venv\Scripts\python.exe -m pytest -q
 .\.venv\Scripts\python.exe -m uvicorn epl.api:app --host 127.0.0.1 --port 8000
 ```
 
-The repository includes audited source files and sealed reports, but no binary model or credentials. `restore_model` validates the code/data/protocol and rebuilds serving models from the sealed decision without rerunning model selection or confirmation. The audit command verifies cached bytes. No accounts, paid APIs or database are needed for local use.
-
-To reproduce the full, longer experiment grid instead:
-
-```powershell
-.\.venv\Scripts\python.exe -m epl.experiments --stage develop
-.\.venv\Scripts\python.exe -m epl.experiments
-```
-
-Development runs the fixed comparison grid. The next command reuses the sealed confirmation if present. It does not create another untouched test. Results are cached locally.
-
-If `py` opens the Microsoft Store, invoke your installed Python 3.12 executable by its full path. Environment activation is unnecessary; PowerShell execution policy need not change.
-
-In a second terminal:
+In a second PowerShell terminal, from the repository root:
 
 ```powershell
 cd frontend
@@ -65,100 +70,79 @@ npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:3000; API documentation: http://127.0.0.1:8000/docs. Stop with Ctrl+C. For a frontend production build, run `npm run build`, then `npm start`.
+Open **[the dashboard](http://127.0.0.1:3000)** or **[interactive API docs](http://127.0.0.1:8000/docs)**. Both run on your machine; no public app deployment is configured. Stop either server with `Ctrl+C`.
 
-## Real data and corrections
+The repository includes the audited dataset and sealed reports. `epl.audit` verifies cached source bytes; `epl.restore_model` rebuilds binary models after checking the frozen code, data, and protocol. It does not rerun the 69-configuration search. Environment activation and PowerShell policy changes are unnecessary. If `py` opens the Microsoft Store, use your installed Python 3.12 executable's full path.
 
-[OpenFootball](https://github.com/openfootball/football.json) publishes the results under CC0-1.0. The snapshot contains **6,080 real matches**, 2010/11–2025/26, through **2026-05-24**. Synthetic matches exist only in tests.
+## How it works
 
-- JSON revision: `e6744429ee395bc86f247348c6184bb08d4eb361`.
-- Correction evidence: [immutable 2019/20 text](https://github.com/openfootball/eng-england/blob/9ee7a0c351805c99cc334478a9bf04b7d0432fec/2019-20/1-premierleague.txt).
-- Independent corroboration: [official Arsenal–Norwich report, July 1, 2020](https://www.premierleague.com/en/news/1697162).
-- `data/audited/manifest.json`: immutable URLs and SHA256 checksums.
-- `corrections.json`: 66 exact fixture/date overrides, source scores, evidence lines and checksums. There is no generic year-shifting rule.
-- `audit.json`: season checks, correction counts and quarantine status.
-
-Every complete season must have 380 unique fixtures, 20 clubs, 19 home and 19 away appearances per club, plausible dates and no same-day double appearances. Both `score.ft: [h,a]` and `score: [h,a]` are supported. Missing scores are unfinished fixtures; `[0,0]` is a real draw. Unreconciled 2019/20 data is quarantined as a whole.
-
-The loader re-verifies raw files, correction evidence, ledger and audit gates. Download errors stop acquisition; no fabricated fallback exists. Structural auditing cannot prove every remaining upstream result correct.
-
-Original `data/raw/`, `artifacts/model.joblib` and `artifacts/metrics.json` remain unchanged in the original development workspace. Binary models, old downloads and local output archives are excluded from Git. Legacy training remains available for reproduction, but it does not repair chronology: use the audited workflow for new work.
-
-## Independent verification and shot-quality research
-
-```powershell
-.\.venv\Scripts\python.exe -m epl.verify_sources
-.\.venv\Scripts\python.exe -m epl.verify_sources --offline
-.\.venv\Scripts\python.exe -m epl.shot_quality
+```mermaid
+flowchart LR
+    A[Versioned historical results] --> B[Checksums and fixture audit]
+    B --> C[Strictly earlier-date features]
+    C --> D[Chronological model evaluation]
+    D --> E[Calibration and promotion gates]
+    E --> F[Verified serving artifact]
+    F --> G[FastAPI]
+    G --> H[Next.js dashboard]
 ```
 
-Source verification downloads less than 1 MB of original Wyscout match/team metadata and compares 2017/18 fixture identities, dates and full-time scores. The second command requires those cached bytes. Conflicts produce a failing exit status and are never silently repaired. Other seasons remain explicitly unverified by an independent provider.
+Features use only matches completed on earlier dates. Every fixture on the same date receives features before that day's results enter history. Evaluation refits coefficients monthly using earlier data; confirmation uses a configuration and calibration temperature fixed before that season's evaluation.
 
-Shot-quality research downloads a roughly 77 MB original event archive once, verifies its checksum and fits a fixed chronological shot model. Features are shot distance, angle and body-part context; goal tags are labels only. Penalties are excluded. Out-of-time estimated xG is aggregated and used only from earlier completed matches. It is our estimate, not provider-supplied Wyscout xG.
+The active model is multinomial logistic regression. The bounded research grid also evaluates Elo/richer form features, shallow boosting, Poisson, and Dixon–Coles models. A separate historical shot-quality experiment stays outside serving. XGBoost is not included.
 
-The fixed 130-match outcome comparison covers February–May 2018. It is a small exploratory study, not evidence of contemporary EPL performance. No hyperparameter search or serving-model promotion occurs. Original downloads stay in ignored `data/external/`; reproducible aggregate reports and attributed derived research data are included.
-
-No current-season feed, injuries, lineups, xG, odds or possession data are acquired. Observed 2026/27 source coverage was incomplete and stale. Football-Data.co.uk is not scraped because its [usage statement](https://football-data.co.uk/data.php) restricts automated training uses.
-
-## Features and models
-
-Features use only dates strictly before a fixture. All matches on a date receive features before any same-day outcome enters history. Older evaluation results may update later features. Coefficients refit at each evaluated month's first calendar day, using only earlier dates.
-
-| Model | Bounded experiment |
+| Area | Where to look |
 | --- | --- |
-| Corrected logistic baseline | Previous-ten form/rest features; monthly refits |
-| Elo logistic regression | Baseline-plus-Elo or rich form/venue features; 54 configurations |
-| Shallow gradient boosting | Best logistic feature settings; 8 configurations; no random early stopping |
-| Poisson and Dixon–Coles | Five-season training window; decay and low-score correction ablations; 6 configurations |
+| Ingestion, features, models, API | [`backend/epl/`](backend/epl/) |
+| Responsive dashboard | [`frontend/app/`](frontend/app/) |
+| Source snapshot, audit, correction ledger | [`data/audited/`](data/audited/) |
+| Frozen protocol and prediction ledgers | [`artifacts/research-v2/`](artifacts/research-v2/) |
+| Windows/Linux backend and frontend checks | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) |
 
-Elo starts at 1500, regresses 25% toward 1500 each offseason and tests `K={10,20,40}` with home offsets `{0,50,100}`. Rich features include last 5/10/20 form, venue form shrunk using five prior-equivalent matches, opponent strength and history freshness. Short-term form resets after gaps exceeding 365 days. Aliases join old and modern club names. Fixed cold-start priors are feature defaults, not invented observations.
+## Measured results
 
-Score models fit centered attack/defence, scoring intercept and home advantage. Dixon–Coles keeps low-score probabilities positive. Optimization failure disqualifies a configuration; unseen teams receive league-average strength. Score grids omit less than `1e-8` probability. Existing NumPy, SciPy and scikit-learn suffice. XGBoost, neural networks and ensembles are outside this round.
+**The audited baseline remains active.** The challenger improved development accuracy but failed the locked confirmation promotion criteria.
 
-## Evaluation and promotion
+| 2025/26 confirmation · 380 matches | Baseline | Selected challenger |
+| --- | ---: | ---: |
+| Accuracy ↑ | **47.63%** | 47.11% |
+| Calibrated log loss ↓ | 1.048861 | **1.030215** |
+| Brier score ↓ | 0.631972 | **0.619025** |
+| Draw recall ↑ | 0.00% | 0.00% |
 
-- **Development:** seven seasons, 2018/19–2024/25. These scores guide selection and are optimistic estimates.
-- **Confirmation:** 2025/26, 380 later matches, with monthly refits. Earlier confirmation results may enter subsequent training; configuration and evaluation temperature remain fixed for the season.
-- **Development gate:** at least +1 percentage point accuracy, raw log loss no more than +0.01 worse, and non-worse accuracy in a majority of seasons.
-- **Selection:** highest eligible accuracy, then lower log loss, then simpler model. No qualifying challenger means retain the corrected baseline.
-- **Calibration:** previous-season monthly out-of-time probabilities; one temperature in `[0.25,4]`, at least 300 predictions and all classes. Failed fitting or worse calibration-fit loss uses `T=1`. Temperature cannot change top-class accuracy.
-- **Promotion:** positive confirmation accuracy gain, a paired 95% accuracy interval entirely above zero, and calibrated log loss no more than +0.01 worse. Otherwise the corrected baseline remains active.
+The accuracy difference is **−0.53 percentage points**, with an approximate paired weekly-block 95% interval of **[−4.44, +3.58]**. Better log loss alone did not satisfy promotion. Zero draw recall is a clear weakness: both models assign draw probabilities but select no draws as their most likely outcome in this confirmation set.
 
-Uncertainty uses 2,000 paired calendar-week bootstrap resamples. Intervals are approximate; dependence can extend beyond a week. There is no confidence filtering, forced draw threshold or class reweighting.
+Development accuracy was 53.01% for the baseline and 54.59% for the selected Poisson challenger across seven seasons. Those scores guided selection; they are not independent confirmation. The original 53.42% benchmark is superseded after correcting upstream fixture dates. [Full model report](MODEL_REPORT.md).
 
-After confirmation, serving models refit on all audited results. Their serving temperature uses the completed confirmation season's out-of-time predictions for subsequent-season use. Displayed confirmation scores retain the earlier frozen temperature; they are not in-sample scores of that final refit.
+The separate shot-quality study improved accuracy from 43.85% to 45.38% on 130 historical fixtures: two extra correct predictions. It does not establish a persistent or modern-season improvement. [Research protocol and outputs](artifacts/shot-quality/README.md).
 
-Reports include accuracy, log loss, Brier score, ECE, reliability curves, confusion matrices, class precision/recall, macro-F1, season results and promoted-team breakdowns. No accuracy level or profitability is guaranteed.
+## Real data, explicit provenance
 
-## Reproducibility and rollback
+- **6,080 real EPL matches**, spanning 2010/11–2025/26, through **May 24, 2026**. OpenFootball snapshot URLs and SHA256 checksums are pinned.
+- **66 incorrect upstream dates repaired** through fixture-level evidence. Raw source bytes remain unchanged; no generic year-shifting rule is used.
+- **380 matches independently reconciled** with Wyscout metadata, with no date or score conflicts. The other **5,700** have structural validation, not independent confirmation.
+- **No fabricated fallback.** Acquisition errors fail visibly. Synthetic fixtures appear only in tests.
 
-`artifacts/research-v2/protocol.json` records code/data hashes, grid, seed and gates before confirmation. `selection.json` freezes the development decision. Prediction CSVs retain fixture identity, fit cutoff and raw probabilities. `confirmation.json` seals selection and ledger hashes. Changed ledgers or code cannot silently reuse the locked result.
+The committed snapshot supports offline auditing. Acquisition commands fetch immutable sources and check their hashes; the optional Wyscout shot-quality experiment downloads about 77 MB. Current-season results, injuries, lineups, live odds, and current xG feeds are unavailable in this project. Derived historical xG is this project's estimate, not provider-supplied Wyscout xG.
 
-Changing code or data requires another experiment directory under `artifacts` using `--output`. It does not make an already-inspected confirmation season untouched again. Do not tune against confirmation and claim a fresh result.
+Read [data sources, licenses, and exclusions](DATA_SOURCES.md), [independent verification](data/verification/README.md), or the [full acquisition and reproduction guide](docs/REPRODUCIBILITY.md).
 
-`artifacts/active.json` selects a checksum-verified artifact. A failed challenger selects the audited, refitted baseline; the original artifact is never overwritten. Invalid pointers/checksums fail closed. Restart the API after switching because artifacts are cached. Do not silently restore the defective legacy benchmark as the safe fallback.
+## API example
 
-Load only locally generated joblib artifacts: untrusted files can execute code. No public deployment, authentication or live-results scheduling is configured.
-
-## API and checks
-
-- `GET /health`: server and artifact-presence status.
-- `GET /teams`: latest snapshot season's clubs and data cutoff.
-- `GET /metrics`: evaluation, audit and model metadata.
-- `POST /predict`: existing request and `A/D/H` probabilities, plus model version, training/calibration period and audit status.
+Use club names from `GET /teams` and a date after the snapshot cutoff:
 
 ```powershell
 $fixture = @{ home_team = 'Arsenal FC'; away_team = 'Chelsea FC'; match_date = '2026-08-01' } | ConvertTo-Json
 Invoke-RestMethod http://127.0.0.1:8000/predict -Method Post -ContentType 'application/json' -Body $fixture
 ```
 
-Use exact names from `/teams` and a date after `data_through`. Invalid dates, identical or unknown clubs return 422. Missing/invalid artifacts return 503. Predictions represent hypothetical fixtures using a historical snapshot, not current schedules or squads.
+`POST /predict` returns `H`, `D`, and `A` probabilities plus the model version, training cutoff, calibration period, and audit status. `GET /metrics` exposes evaluation reports. Invalid fixtures return `422`; missing or invalid models return `503`. [API and configuration details](docs/REPRODUCIBILITY.md#api-and-checks).
 
-Localhost dashboard origins are allowed. Set `NEXT_PUBLIC_API_URL` in `frontend/.env.local` for another target; remote origins also need backend CORS changes. No secrets belong in that public setting.
+## Checks
 
 ```powershell
+$env:PYTHONPATH = 'backend'
 .\.venv\Scripts\python.exe -m pytest -q
-.\.venv\Scripts\python.exe -m compileall -q backend
 .\.venv\Scripts\python.exe -m pip check
 cd frontend
 npm test
@@ -166,8 +150,14 @@ npm run typecheck
 npm run build
 ```
 
-See `MODEL_REPORT.md` and `VERIFICATION.md` for measured results and executed checks. Dependencies remain pinned. One upstream Starlette/httpx test-client deprecation warning remains.
+The published CI checks the backend on Windows and Linux, plus frontend tests, types, and production build. The implementation verification recorded **98 backend tests and 4 frontend tests passing**. See the [CI runs](https://github.com/sachiyacodes/epl-match-outcome-predictor/actions) and [verification record](VERIFICATION.md).
+
+## Scope and next steps
+
+This is a research MVP and portfolio project. Predictions describe hypothetical fixtures using historical results, not current schedules or squads. No accuracy or betting-profit guarantee is made. Public hosting, authentication, and scheduled data refresh are not configured.
+
+Future work should start with broader independently verified, appropriately licensed data and a genuinely later evaluation period. The inspected confirmation season cannot become an untouched test again.
 
 ## License
 
-Project source code is [MIT licensed](LICENSE). Third-party data retains its original license: OpenFootball uses CC0; Wyscout research data uses CC BY 4.0. Those data licenses are not replaced by the software license. See [DATA_SOURCES.md](DATA_SOURCES.md) for attribution, changes, coverage and exclusions. This project is not affiliated with the Premier League or its data providers.
+Code: [MIT](LICENSE). OpenFootball data: CC0. Wyscout research data: CC BY 4.0, with attribution and transformations documented in [DATA_SOURCES.md](DATA_SOURCES.md). Software licensing does not replace data licensing. This project is not affiliated with the Premier League or its data providers.
