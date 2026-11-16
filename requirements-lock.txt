@@ -18,7 +18,7 @@ pluggy==1.7.0
 pydantic==2.14.3
 pydantic_core==2.50.4
 Pygments==2.21.0
-pytest==9.0.2
+pytest==9.0.3
 python-dateutil==4.0.0
 scikit-learn==1.8.0
 scipy==1.17.1
